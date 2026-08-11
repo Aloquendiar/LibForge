@@ -39,9 +39,9 @@ struct {
     int drums : 1;
     int guitar : 1; // This wasn't vocals, it's guitar
     int bass : 1;
-    int unk_3 : 1; // Maybe keys?
+    int unk_3 : 1; 
     int unk_4 : 1;
-    int unk_5 : 1;
+    int keys : 1; // Keys?? seen on Everybody Wants to Rule the World
 } solos;
 char fake;
 char shortname[256];
