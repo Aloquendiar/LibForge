@@ -45,7 +45,7 @@ namespace LibForge.SongData
         Solos = solosValue,
         GameOrigin = songDta.Array("game_origin")?.Any(1) ?? "ugc_plus",
         Genre = songDta.Array("genre").Symbol(1).ToString(),
-        HasMarkup = markup == "1" || markup == "TRUE", //idea leer la string via dta del con la variable (markup True) 
+        HasMarkup = markup == "1" || markup == "TRUE",
         Medium = "",
         Name = songDta.Array("name").String(1),
         OriginalYear = songDta.Array("year_released").Int(1),
