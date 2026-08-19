@@ -85,7 +85,7 @@ namespace LibForge.RBSong
           "kTempoFast" or "64" => "fast",
           _ => "medium" // in the case of unusual values ​​created by the community
         };
-      var animpercussion = array.Array("bank")?.Any(1)
+      var percussionBank = array.Array("bank")?.Any(1)
         .Replace("sfx/", "fusion/patches/vox_perc_")
         .Replace("_bank.milo", ".fusion")
         ?? "fusion/patches/vox_perc_tambourine.fusion";
@@ -125,7 +125,7 @@ namespace LibForge.RBSong
                         new Property("vocal_track_scroll_duration_ms", new LongValue(array.Array("song_scroll_speed")?.Int(1) ?? 2300)),
                         new Property("global_tuning_offset", new FloatValue(array.Array("tuning_offset_cents")?.Number(1) ?? 0)),
                         new Property("band_fail_sound_event", new SymbolValue(failsound)),
-                        new Property("vocal_percussion_patch", new ResourcePathValue(animpercussion)),
+                        new Property("vocal_percussion_patch", new ResourcePathValue(percussionBank)),
                         new Property("drum_kit_patch", new ResourcePathValue(drumBank)),
                         new Property("improv_solo_patch", new SymbolValue("gtrsolo_amer_03")),
                         new Property("dynamic_drum_fill_override", new IntValue(10)),
